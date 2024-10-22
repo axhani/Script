@@ -1,19 +1,12 @@
 #!name=SteamPY监控-自动下单
-#!desc= 监控 Steampy cdkey并送通知,多个数据用&分开,Cookie accessToken只需要一个就可以或在boxjs中添加数据 Boxjs：https://raw.githubusercontent.com/anyehttp/quantumult-x/main/boxjs/anye_boxjs.json
+#!desc= 在boxjs中添加数据 Boxjs：https://raw.githubusercontent.com/anyehttp/quantumult-x/main/boxjs/anye_boxjs.json
 #!author = 暗夜 [https://github.com/anyehttp]
 #!homePage = https://t.me/IPAs_share
 #!icon=https://raw.githubusercontent.com/axhani/icon/refs/heads/main/PY.png
 
 
-#!input = Cookie
-#!input = Token
-#!input = Agent
-#!input = 游戏名
-#!input = 游戏ID
-
-
 [Argument]
-arg1 = input,"17 10 * * *",tag=任务时间
+arg1 = input,"30/1 * * * *",tag=任务时间
 arg2 = switch,true,tag=获取Token
 
 
