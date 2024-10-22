@@ -6,7 +6,10 @@
 #!icon = https://raw.githubusercontent.com/Keywos/rule/main/tv/app/144px/yj.png
 #!input = 地区
 
+[Argument]
+arg1 = input,"10 9 * * *",tag=今日油价任务时间
+
 
 [Script]
 
-cron "0 18 * * *" script-path=https://github.com/Keywos/rule/raw/main/JS/loonyj.js, tag=每日油价
+cron [arg1] script-path=https://github.com/Keywos/rule/raw/main/JS/loonyj.js, tag=每日油价
