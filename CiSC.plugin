@@ -1,7 +1,8 @@
 #!name = 签到脚本合集
-#!desc = 收集并整理各大佬的定时签到脚本，脚本:奶茶多合一、蜜雪冰城、达美乐、阿里云社区、雨晨ios、高德地图、高德抢券、顺丰速运、B站每日等级、NodeSeek、网易云音乐人、杜蕾斯、杰士邦、逢三得利、尊享金陵
-#!author = 自用
+#!desc = 收集并整理各大佬的定时签到脚本
+脚本:奶茶多合一、蜜雪冰城、达美乐、阿里云社区、雨晨ios、高德地图、高德抢券、顺丰速运、B站每日等级、NodeSeek、网易云音乐人、杜蕾斯、杰士邦、逢三得利、尊享金陵....
 #!date = 2024-10-22
+#!author = 自用
 #!icon = https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/gril.png
 #!loon_version = 3.2.3(753)
 
