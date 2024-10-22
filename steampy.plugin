@@ -7,8 +7,8 @@
 
 
 [Argument]
-arg1 = input,"17 10 * * *",tag=SteamPY任务时间
-arg2 = switch,true,tag=SteamPY获取Token
+arg1 = input,"17 10 * * *",tag=任务时间
+arg2 = switch,true,tag=获取Token
 
 
 [Script]
