@@ -1,7 +1,13 @@
 #!name=SteamPY监控-自动下单
-#!desc=在boxjs中添加数据 boxjs：https://raw.githubusercontent.com/anyehttp/quantumult-x/main/boxjs/anye_boxjs.json  群组：https://t.me/+A1cOYwvOdeI4MWNl 频道：https://t.me/IPAs_share
+#!desc= 监控 Steampy cdkey并送通知,多个数据用&分开,Cookie accessToken只需要一个就可以或在boxjs中添加数据 Boxjs：https://raw.githubusercontent.com/anyehttp/quantumult-x/main/boxjs/anye_boxjs.json
+#!author = 暗夜 [https://github.com/anyehttp]
+#!homePage = https://t.me/IPAs_share
 #!icon=https://raw.githubusercontent.com/axhani/icon/refs/heads/main/PY.png
-#!keyword=暗夜
+
+
+#!input = Cookie
+#!input = Token
+#!input = Agent
 #!input = 游戏名
 #!input = 游戏ID
 
