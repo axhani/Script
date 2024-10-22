@@ -95,7 +95,7 @@ http-response ^https?:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\
 cron {arg18} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=120,enable= {arg19}, tag=高德地图
 
 cron {arg20} script-path=https://raw.githubusercontent.com/axhani/Script/refs/heads/main/SF(Sliverkiss).js, timeout=120,enable= {arg21}, tag=顺丰速运
-http-response ^https:\/\/raw\.githubusercontent\.com\/axhani\/Script\/refs\/heads\/main\/SF\(Sliverkiss\)\.js script-path=https://raw.githubusercontent.com/axhani/Script/refs/heads/main/SF(Sliverkiss).js, requires-body=true, timeout=10,enable = {arg22}, tag=顺丰速运获取token
+http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/axhani/quantumult-x/refs/heads/main/SF(Sliverkiss).js, requires-body=true, timeout=60,enable= {arg22}, tag=顺丰速运获取token
 
 cron {arg23} script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout=120,enable= {arg24}, tag=B站每日等级
 http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, binary-body-mode=true, timeout=60,enable = {arg25}, tag=B站每日等级
