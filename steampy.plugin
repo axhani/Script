@@ -1,15 +1,19 @@
 #!name=SteamPY监控-自动下单
 #!desc=在boxjs中添加数据 boxjs：https://raw.githubusercontent.com/anyehttp/quantumult-x/main/boxjs/anye_boxjs.json  群组：https://t.me/+A1cOYwvOdeI4MWNl 频道：https://t.me/IPAs_share
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1063.png
+#!icon=https://raw.githubusercontent.com/axhani/icon/refs/heads/main/PY.png
 #!keyword=暗夜
-#!arguments1 = input,"17 10 * * *",tag=SteamPY任务时间
-#!arguments2 = switch,true,tag=SteamPY任务开关
+#!input = 游戏名
+#!input = 游戏ID
 
+
+[Argument]
+arg1 = input,"17 10 * * *",tag=SteamPY任务时间
+arg2 = switch,true,tag=SteamPY获取Token
 
 
 [Script]
-cron {arguments1} script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/Steampy.js, timeout=3,enable = {arguments2}, tag=Steampy监控
-http-request https:\/\/steampy\.com\/(ownspace|xboot\/user\/info) script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/Stemapt_Cookie.js, tag=Steampy_Cookie
+cron {arg1} script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/Steampy.js, timeout=3,tag=Steampy监控
+http-request https:\/\/steampy\.com\/(ownspace|xboot\/user\/info) script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/Stemapt_Cookie.js,enable = {arg2},tag=Steampy_Cookie
 
 [MITM]
 hostname = steampy.com
