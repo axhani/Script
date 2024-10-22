@@ -24,6 +24,20 @@ arg10 = input,"30 10 * * *",tag=阿里云社区
 arg11 = switch,true,tag=阿里云社区任务开关
 arg12 = switch,true,tag=阿里云社区获取token
 
+arg13 = input,"30 10 * * *",tag=雨晨ios签到任务时间
+arg14 = switch,true,tag=雨晨ios签到任务开关
+
+arg15 = input,"30 10 * * *",tag=高德地图任务时间
+arg16 = switch,true,tag=高德地图任务开关
+arg17 = switch,true,tag=高德地图获取token
+
+
+
+
+
+
+
+
 [Script]
 cron {arg1} script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, enable= {arg2}, tag=奶茶多合一
 http-response ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enable = {arg3}, tag=奶茶获取token
@@ -35,10 +49,16 @@ http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=ht
 cron {arg7} script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js,timeout=300, enable= {arg8}, tag=达美乐披萨
 http-request ^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js, requires-body=true, timeout=10, enable = {arg9}, tag=达美乐披萨获取token
 
-cron {arg10} script-path=https://github.com/leiyiyan/resource/blob/main/script/aliyun_web/aliyun_web.js, timeout=600,enable= {arg11}, tag=阿里云社区日常任务
+cron {arg10} script-path=https://github.com/leiyiyan/resource/blob/main/script/aliyun_web/aliyun_web.js, timeout=600,enable= {arg11}, tag=阿里云社区
 http-response ^https?:\/\/developer\.aliyun\.com\/developer\/api\/my\/user\/getUser script-path=https://github.com/leiyiyan/resource/blob/main/script/aliyun_web/aliyun_web.js, requires-body=true, timeout=60,enable = {arg12}, tag=阿里云社区获取token
+
+cron {arg13} script-path=https://gist.githubusercontent.com/Sliverkiss/9aab5b214f3145e39639a2581e83bb27/raw/yuchenios.js, timeout=600,enable= {arg14}, tag=雨晨ios签到
+
+cron {arg15} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=120,enable= {arg16}, tag=高德地图
+http-response ^https?:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60,enable = {arg17}, tag=高德地图获取token
+
 
 
 
 [MITM]
-hostname = webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn,mxsa.mxbc.net,game.dominos.com.cn,developer.aliyun.com
+hostname = webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn,mxsa.mxbc.net,game.dominos.com.cn,developer.aliyun.com,*.amap.com,
