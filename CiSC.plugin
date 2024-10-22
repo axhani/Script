@@ -66,7 +66,7 @@ arg43 = switch,flag,tag=尊享金陵获取token
 
 arg44 = input,"10 9 * * *",tag=WPS任务时间
 arg45 = switch,flag,tag=WPS任务开关
-arg46 = switch,flag,tag=WPStoken
+arg46 = switch,flag,tag=WPS获取token
 
 
 
