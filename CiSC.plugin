@@ -64,7 +64,9 @@ arg41 = input,"10 9 * * *",tag=尊享金陵任务时间
 arg42 = switch,flag,tag=尊享金陵任务开关
 arg43 = switch,flag,tag=尊享金陵获取token
 
-
+arg44 = input,"10 9 * * *",tag=WPS任务时间
+arg45 = switch,flag,tag=WPS任务开关
+arg46 = switch,flag,tag=WPStoken
 
 
 
@@ -117,9 +119,9 @@ http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/member\/info script
 cron {arg41} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, timeout=3600,enable={arg42}, tag=尊享金陵
 http-response ^https:\/\/app\.jinlinghotels\.com\/app\/wx\/v1\/getAuthUser script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, requires-body=true,enable={arg43}, tag=尊享金陵_获取token
 
-
-
+cron {arg44} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/wps.js, timeout=120,enable={arg45}, tag=WPS
+http-request ^https:\/\/(vip|account)(userinfo|\.wps\.cn\/p\/auth\/check)$ script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/wps.js, timeout=60,enable={arg46}, tag=WPS获取token
 
 
 [MITM]
-hostname = webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn, mxsa.mxbc.net, game.dominos.com.cn, developer.aliyun.com, *.amap.com, mcs-mimp-web.sf-express.com, app.bilibili.com, m.bilibili.com, www.nodeseek.com, music.163.com, vip.ixiliu.cn, xh-vip-api.a-touchin.com, xiaodian.miyatech.com,app.jinlinghotels.com
+hostname = webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn, mxsa.mxbc.net, game.dominos.com.cn, developer.aliyun.com, *.amap.com, mcs-mimp-web.sf-express.com, app.bilibili.com, m.bilibili.com, www.nodeseek.com, music.163.com, vip.ixiliu.cn, xh-vip-api.a-touchin.com, xiaodian.miyatech.com,app.jinlinghotels.com,  *.wps.cn
