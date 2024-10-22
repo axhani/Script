@@ -124,4 +124,4 @@ http-response ^https:\/\/app\.jinlinghotels\.com\/app\/wx\/v1\/getAuthUser scrip
 
 
 [MITM]
-hostname = webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn,mxsa.mxbc.net,game.dominos.com.cn,developer.aliyun.com,*.amap.com, mcs-mimp-web.sf-express.com,app.bilibili.com, m.bilibili.com,www.nodeseek.com, music.163.com,vip.ixiliu.cn,xh-vip-api.a-touchin.com,xiaodian.miyatech.com,app.jinlinghotels.com
+hostname = webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn, mxsa.mxbc.net, game.dominos.com.cn, developer.aliyun.com, *.amap.com, mcs-mimp-web.sf-express.com, app.bilibili.com, m.bilibili.com, www.nodeseek.com, music.163.com, vip.ixiliu.cn, xh-vip-api.a-touchin.com, xiaodian.miyatech.com,app.jinlinghotels.com
