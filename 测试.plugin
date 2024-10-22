@@ -34,6 +34,9 @@ arg17 = switch,true,tag=高德地图获取token
 arg18 = input,"30 10 * * *",tag=高德抢券任务时间
 arg19 = switch,true,tag=高德抢券任务开关
 
+arg20 = input,"30 10 * * *",tag=顺丰速运任务时间
+arg21 = switch,true,tag=高顺丰速运务开关
+arg22 = switch,true,tag=顺丰速运获取token
 
 
 
@@ -60,6 +63,8 @@ http-response ^https?:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\
 
 cron {arg18} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=120,enable= {arg19}, tag=高德地图
 
+cron {arg15} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=120,enable= {arg16}, tag=顺丰速运
+http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDacheCoupon.js, requires-body=true, timeout=60, tag=顺丰速运获取token
 
 
 [MITM]
