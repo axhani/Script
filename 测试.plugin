@@ -1,5 +1,5 @@
 #!name = 签到脚本合集
-#!desc = 收集各大佬的定时签到脚本
+#!desc = 收集并整理各大佬的定时签到脚本
 #!author = axhani [https://github.com/axhani]
 #!homePage = https://t.me/sliverkiss_blog
 #!data = 2024-09-21
@@ -10,10 +10,35 @@
 [Argument]
 arg1 = input,"17 10 * * *",tag=奶茶多合一任务时间
 arg2 = switch,true,tag=奶茶多合一任务开关
-arg3 = switch,true,tag=奶茶多合一token
+arg3 = switch,true,tag=奶茶多合一获取token
+
+arg4 = input,"21 9 * * *",tag=蜜雪冰城任务时间
+arg5 = switch,true,tag=蜜雪冰城任务开关
+arg6 = switch,true,tag=蜜雪冰城获取token
+
+arg7 = input,"30 10 * * *",tag=达美乐任务时间
+arg8 = switch,true,tag=达美乐任务开关
+arg9 = switch,true,tag=达美乐披萨获取token
+
+arg10 = input,"30 10 * * *",tag=阿里云社区
+arg11 = switch,true,tag=阿里云社区任务开关
+arg12 = switch,true,tag=阿里云社区获取token
 
 [Script]
 cron {arg1} script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, enable= {arg2}, tag=奶茶多合一
-
 http-response ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enable = {arg3}, tag=奶茶获取token
 http-request ^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enable = {arg3}, tag=奶茶获取token
+
+cron {arg4} script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=300, enable={arg5}, tag=蜜雪冰城
+http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60,  enable = {arg6}, tag=蜜雪冰城获取token
+
+cron {arg7} script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js,timeout=300, enable= {arg8}, tag=达美乐披萨
+http-request ^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js, requires-body=true, timeout=10, enable = {arg9}, tag=达美乐披萨获取token
+
+cron {arg10} script-path=https://github.com/leiyiyan/resource/blob/main/script/aliyun_web/aliyun_web.js, timeout=600,enable= {arg11}, tag=阿里云社区日常任务
+http-response ^https?:\/\/developer\.aliyun\.com\/developer\/api\/my\/user\/getUser script-path=https://github.com/leiyiyan/resource/blob/main/script/aliyun_web/aliyun_web.js, requires-body=true, timeout=60,enable = {arg12}, tag=阿里云社区获取token
+
+
+
+[MITM]
+hostname = webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn,mxsa.mxbc.net,game.dominos.com.cn,developer.aliyun.com
