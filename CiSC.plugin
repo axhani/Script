@@ -102,7 +102,7 @@ http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=h
 http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, binary-body-mode=true, timeout=60, enable = {arg25},tag=B站每日等级获取token
 
 cron {arg26} script-path=https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, timeout=120,enable= {arg27}, tag=NodeSeek
-http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path=https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body=true, timeout=60,enable = {arg28},tag=NodeSeek获取token
+http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path=https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body=true, timeout=60,enable= {arg28}, tag=NodeSeek获取token
 
 cron {arg29} script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout=120,enable= {arg30}, tag=网易云音乐人
 http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body=true, timeout=60,enable = {arg31}, tag=网易云音乐人获取token
