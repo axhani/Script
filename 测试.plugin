@@ -31,7 +31,8 @@ arg15 = input,"30 10 * * *",tag=高德地图任务时间
 arg16 = switch,true,tag=高德地图任务开关
 arg17 = switch,true,tag=高德地图获取token
 
-
+arg18 = input,"30 10 * * *",tag=高德抢券任务时间
+arg19 = switch,true,tag=高德抢券任务开关
 
 
 
@@ -57,6 +58,7 @@ cron {arg13} script-path=https://gist.githubusercontent.com/Sliverkiss/9aab5b214
 cron {arg15} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=120,enable= {arg16}, tag=高德地图
 http-response ^https?:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60,enable = {arg17}, tag=高德地图获取token
 
+cron {arg18} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=120,enable= {arg19}, tag=高德地图
 
 
 
