@@ -7,7 +7,8 @@
 重写:打开小程序，进入我的页面，点击优惠券页面获取token。支持多账号。
 
 [Script]
-http-response ^https:\/\/raw\.githubusercontent\.com\/axhani\/Script\/refs\/heads\/main\/SF\(Sliverkiss\)\.js script-path=https://raw.githubusercontent.com/axhani/Script/refs/heads/main/SF(Sliverkiss).js, requires-body=true, timeout=10, tag=顺丰速运获取token
+http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/axhani/quantumult-x/refs/heads/main/SF(Sliverkiss).js, requires-body=true, timeout=60, tag=顺丰速运获取token
+
 
 [MITM]
 hostname = mcs-mimp-web.sf-express.com
