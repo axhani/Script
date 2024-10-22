@@ -35,8 +35,39 @@ arg18 = input,"30 10 * * *",tag=高德抢券任务时间
 arg19 = switch,true,tag=高德抢券任务开关
 
 arg20 = input,"30 10 * * *",tag=顺丰速运任务时间
-arg21 = switch,true,tag=高顺丰速运务开关
+arg21 = switch,true,tag=顺丰速运任务开关
 arg22 = switch,true,tag=顺丰速运获取token
+
+arg23 = input,"30 10 * * *",tag=B站每日等级任务时间
+arg24 = switch,true,tag=B站每日等级任务开关
+arg25 = switch,true,tag=B站每日等级获取token
+
+arg26 = input,"30 10 * * *",tag=NodeSeek任务时间
+arg27 = switch,true,tag=NodeSeek任务开关
+arg28 = switch,true,tag=NodeSeek获取token
+
+arg29 = input,"30 10 * * *",tag=网易云音乐人任务时间
+arg30 = switch,true,tag=网易云音乐人任务开关
+arg31 = switch,true,tag=网易云音乐人获取token
+
+arg32 = input,"30 10 * * *",tag=杜蕾斯任务时间
+arg33 = switch,true,tag=杜蕾斯任务开关
+arg34 = switch,true,tag=杜蕾斯获取token
+
+arg35 = input,"10 10 * * *",tag=杰士邦任务时间
+arg36 = switch,true,tag=杰士邦任务开关
+arg37 = switch,true,tag=杰士邦获取token
+
+arg38 = input,"10 10 * * *",tag=逢三得利任务时间
+arg39 = switch,true,tag=逢三得利任务开关
+arg40 = switch,true,tag=逢三得利获取token
+
+arg41 = input,"10 10 * * *",tag=尊享金陵任务时间
+arg42 = switch,true,tag=尊享金陵任务开关
+arg43 = switch,true,tag=尊享金陵获取token
+
+
+
 
 
 
@@ -63,9 +94,34 @@ http-response ^https?:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\
 
 cron {arg18} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=120,enable= {arg19}, tag=高德地图
 
-cron {arg15} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=120,enable= {arg16}, tag=顺丰速运
-http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDacheCoupon.js, requires-body=true, timeout=60, tag=顺丰速运获取token
+cron {arg20} script-path=https://raw.githubusercontent.com/axhani/Script/refs/heads/main/SF(Sliverkiss).js, timeout=120,enable= {arg21}, tag=顺丰速运
+http-response ^https:\/\/raw\.githubusercontent\.com\/axhani\/Script\/refs\/heads\/main\/SF\(Sliverkiss\)\.js script-path=https://raw.githubusercontent.com/axhani/Script/refs/heads/main/SF(Sliverkiss).js, requires-body=true, timeout=10,enable = {arg22}, tag=顺丰速运获取token
+
+cron {arg23} script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout=120,enable= {arg24}, tag=B站每日等级
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, binary-body-mode=true, timeout=60,enable = {arg25}, tag=B站每日等级
+http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, binary-body-mode=true, timeout=60, enable = {arg25},tag=B站每日等级获取token
+
+cron {arg26} script-path=https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, timeout=120,enable= {arg27}, tag=B站每日等级
+http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path=https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body=true, timeout=60,enable = {arg28},tag=NodeSeek获取token
+
+cron {arg29} script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout=120,enable= {arg30}, tag=网易云音乐人
+http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body=true, timeout=60,enable = {arg31}, tag=网易云音乐人获取token
+
+cron {arg32} script-path=https://raw.githubusercontent.com/czy13724/Quantumult-X/main/scripts/dls.js, timeout=120,enable= {arg33}, tag=杜蕾斯
+http-request ^https:\/\/vip\.ixiliu\.cn\/mp\/user\/info$ script-path=https://raw.githubusercontent.com/czy13724/Quantumult-X/main/scripts/dls.js, timeout=60,enable = {arg34}, tag=杜蕾斯获取token
+
+cron {arg35} script-path=https://gist.githubusercontent.com/Sliverkiss/6d15658e313eee254a55d2b97933587c/raw/jsb.js, timeout=300, enable={arg36}, tag=杰士邦安心福利社
+http-response ^https:\/\/xh-vip-api\.a-touchin\.com\/mp\/user\/info script-path=https://gist.githubusercontent.com/Sliverkiss/6d15658e313eee254a55d2b97933587c/raw/jsb.js, requires-body=true, timeout=60, enable = {arg37}, tag=杰士邦安心福利社获取token
+
+cron {arg38} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/SDL/SDL.js, timeout=3600,enable={arg39}, tag=三得利
+http-response ^https:\/\/xiaodian\.miyatech\.com\/api\/user\/member\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/SDL/SDL.js, requires-body=true,enable={arg40}, tag=三得利_获取token
+
+cron {arg41} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, timeout=3600,enable={arg42}, tag=尊享金陵
+http-response ^https:\/\/app\.jinlinghotels\.com\/app\/wx\/v1\/getAuthUser script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/ZXJL/ZXJL.js, requires-body=true,enable={arg43}, tag=尊享金陵_获取token
+
+
+
 
 
 [MITM]
-hostname = webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn,mxsa.mxbc.net,game.dominos.com.cn,developer.aliyun.com,*.amap.com,
+hostname = webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn,mxsa.mxbc.net,game.dominos.com.cn,developer.aliyun.com,*.amap.com, mcs-mimp-web.sf-express.com,app.bilibili.com, m.bilibili.com,www.nodeseek.com, music.163.com,vip.ixiliu.cn,xh-vip-api.a-touchin.com,xiaodian.miyatech.com,app.jinlinghotels.com
