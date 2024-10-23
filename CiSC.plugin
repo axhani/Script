@@ -6,65 +6,65 @@
 #!loon_version = 3.2.3(753)
 
 [Argument]
-arg1 = input,"10 9 * * *",tag=奶茶多合一任务时间
+arg1 = input,"10 9 * * *",tag=奶茶多合一定时参数
 arg2 = switch,flag,tag=奶茶多合一任务开关
 arg3 = switch,flag,tag=奶茶多合一获取token
 
-arg4 = input,"10 9 * * *",tag=蜜雪冰城任务时间
+arg4 = input,"10 9 * * *",tag=蜜雪冰城定时参数
 arg5 = switch,flag,tag=蜜雪冰城任务开关
 arg6 = switch,flag,tag=蜜雪冰城获取token
 
-arg7 = input,"31 10 * * *",tag=达美乐任务时间
+arg7 = input,"31 10 * * *",tag=达美乐定时参数
 arg8 = switch,flag,tag=达美乐任务开关
 arg9 = switch,flag,tag=达美乐披萨获取token
 
-arg10 = input,"10 9,17 * * *",tag=阿里云社区
+arg10 = input,"10 9,17 * * *",tag=阿里云社区定时参数
 arg11 = switch,flag,tag=阿里云社区任务开关
 arg12 = switch,flag,tag=阿里云社区获取token
 
-arg13 = input,"10 9 * * *",tag=雨晨ios签到任务时间
+arg13 = input,"10 9 * * *",tag=雨晨ios签到定时参数
 arg14 = switch,flag,tag=雨晨ios签到任务开关
 
-arg15 = input,"10 9 * * *",tag=高德地图任务时间
+arg15 = input,"10 9 * * *",tag=高德地图定时参数
 arg16 = switch,flag,tag=高德地图任务开关
 arg17 = switch,flag,tag=高德地图获取token
 
-arg18 = input,"0 6,12,18 * * *",tag=高德抢券任务时间
+arg18 = input,"0 6,12,18 * * *",tag=高德抢券定时参数
 arg19 = switch,flag,tag=高德抢券任务开关
 
-arg20 = input,"10 9 * * *",tag=顺丰速运任务时间
+arg20 = input,"10 9 * * *",tag=顺丰速运定时参数
 arg21 = switch,flag,tag=顺丰速运任务开关
 arg22 = switch,flag,tag=顺丰速运获取token
 
-arg23 = input,"10 9 * * *",tag=B站每日等级任务时间
+arg23 = input,"10 9 * * *",tag=B站每日等级定时参数
 arg24 = switch,flag,tag=B站每日等级任务开关
 arg25 = switch,flag,tag=B站每日等级获取token
 
-arg26 = input,"10 9 * * *",tag=NodeSeek任务时间
+arg26 = input,"10 9 * * *",tag=NodeSeek定时参数
 arg27 = switch,flag,tag=NodeSeek任务开关
 arg28 = switch,flag,tag=NodeSeek获取token
 
-arg29 = input,"10 9 * * *",tag=网易云音乐人任务时间
+arg29 = input,"10 9 * * *",tag=网易云音乐人定时参数
 arg30 = switch,flag,tag=网易云音乐人任务开关
 arg31 = switch,flag,tag=网易云音乐人获取token
 
-arg32 = input,"10 9 * * *",tag=杜蕾斯任务时间
+arg32 = input,"10 9 * * *",tag=杜蕾斯定时参数
 arg33 = switch,flag,tag=杜蕾斯任务开关
 arg34 = switch,flag,tag=杜蕾斯获取token
 
-arg35 = input,"10 9 * * *",tag=杰士邦任务时间
+arg35 = input,"10 9 * * *",tag=杰士邦定时参数
 arg36 = switch,flag,tag=杰士邦任务开关
 arg37 = switch,flag,tag=杰士邦获取token
 
-arg38 = input,"10 9 * * *",tag=逢三得利任务时间
+arg38 = input,"10 9 * * *",tag=逢三得利定时参数
 arg39 = switch,flag,tag=逢三得利任务开关
 arg40 = switch,flag,tag=逢三得利获取token
 
-arg41 = input,"10 9 * * *",tag=尊享金陵任务时间
+arg41 = input,"10 9 * * *",tag=尊享金陵定时参数
 arg42 = switch,flag,tag=尊享金陵任务开关
 arg43 = switch,flag,tag=尊享金陵获取token
 
-arg44 = input,"10 9 * * *",tag=WPS任务时间
+arg44 = input,"10 9 * * *",tag=WPS定时参数
 arg45 = switch,flag,tag=WPS任务开关
 arg46 = switch,flag,tag=WPS获取token
 
