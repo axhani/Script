@@ -1,7 +1,7 @@
-#!name = WPS-PC签到
+#!name = WPS签到
 #!desc = 用手机打开https://vip.wps.cn/home 登录后，自动获取cookie
 #!author = 灰灰 
-#!icon = https://raw.githubusercontent.com/axhani/icon/refs/heads/main/miaomiao.png
+#!icon = https://raw.githubusercontent.com/axhani/icon/refs/heads/main/WPS.png
 #!loon_version = 3.2.3(753)
 
 [Argument]
