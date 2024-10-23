@@ -6,7 +6,7 @@
 
 [Argument]
 arg1 = input,"10 9 * * *",tag=定时参数
-arg2 = switch,flag,tag=捕获cookie
+arg2 = switch,flag,tag=获取cookie
 
 
 [Script]
