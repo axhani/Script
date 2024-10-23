@@ -5,8 +5,8 @@
 #!icon = https://raw.githubusercontent.com/axhani/icon/refs/heads/main/WPS.png
 
 [Argument]
-arg1 = input,"10 9 * * *",tag=任务时间
-arg2 = switch,flag,tag=获取cookie
+arg1 = input,"10 9 * * *",tag=定时参数
+arg2 = switch,flag,tag=捕获cookie
 
 
 [Script]
