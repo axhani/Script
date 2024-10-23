@@ -1,0 +1,17 @@
+#!name = WPS-PC签到
+#!desc = 用手机打开https://vip.wps.cn/home 登录后，自动获取cookie
+#!author = 灰灰 
+#!icon = https://raw.githubusercontent.com/axhani/icon/refs/heads/main/miaomiao.png
+#!loon_version = 3.2.3(753)
+
+[Argument]
+arg1 = input,"10 9 * * *",tag=任务时间
+arg2 = switch,flag,tag=获取cookie
+
+
+[Script]
+cron {arg1} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/wps.js, timeout=120, tag=WPS
+http-request ^https:\/\/(vip|account)(userinfo|\.wps\.cn\/p\/auth\/check)$ script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/wps.js, timeout=60,enable={arg2}, tag=WPS获取cookie
+
+[MITM]
+hostname = *.wps.cn
