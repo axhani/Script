@@ -1,6 +1,6 @@
 #!name=Keep解锁会员
 #!desc=解锁课程预览，直播课。会员付费课跟练，会员训练计划。
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1040.png
+#!icon=https://raw.githubusercontent.com/axhani/icon/refs/heads/main/Keep.png
 
 [Script]
 # >keep 课程预览 直播课。会员付费课跟练 会员训练计划
