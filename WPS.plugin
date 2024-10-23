@@ -1,8 +1,8 @@
 #!name = WPS签到
 #!desc = 用手机打开 https://vip.wps.cn/home 登录后，自动获取cookie
+#!date = 2024-10-23
 #!author = 灰灰 
 #!icon = https://raw.githubusercontent.com/axhani/icon/refs/heads/main/WPS.png
-#!loon_version = 3.2.3(753)
 
 [Argument]
 arg1 = input,"10 9 * * *",tag=任务时间
