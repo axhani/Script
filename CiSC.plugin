@@ -97,9 +97,9 @@ cron {arg18} script-path=https://raw.githubusercontent.com/wf021325/qx/master/ta
 cron {arg20} script-path=https://raw.githubusercontent.com/axhani/Script/refs/heads/main/SF(Sliverkiss).js, timeout=120,enable= {arg21}, tag=顺丰速运
 http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/axhani/Script/refs/heads/main/SF(Sliverkiss).js, requires-body=true, timeout=60, enable= {arg22},tag=顺丰速运获取token
 
-cron {arg23} script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout=120,enable= {arg24}, tag=B站每日等级
-http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, binary-body-mode=true, timeout=60,enable = {arg25}, tag=B站每日等级
-http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, binary-body-mode=true, timeout=60, enable = {arg25},tag=B站每日等级获取token
+cron {arg23} script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, enable= {arg24},tag=B站每日等级任务
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, enable = {arg25},tag=B站Cookie(APP)
+http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, enable = {arg25},tag=B站Cookie(网页)
 
 cron {arg26} script-path=https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, timeout=120,enable= {arg27}, tag=NodeSeek
 http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path=https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body=true, timeout=60,enable= {arg28}, tag=NodeSeek获取token
