@@ -1,4 +1,4 @@
-#!name = Emby保号
+#!name = Emby Account
 #!desc = 俩大佬的本，二合一，双管齐下。moyu版（自行添加Hostname，如果Emby服是Http://开头的，则无需手动添加Hostname,注：可能不适用需要观看视频才可保号的Emby服） ，feishi版（只需手动观看一次）
 #!author = ZenmoFeiShi（墨鱼）[https://github.com/ZenmoFeiShi],ddgksf2013（怎么肥事）[https://github.com/ddgksf2013]
 #!loon_version = 3.2.2(749)
