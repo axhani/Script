@@ -1,5 +1,5 @@
 #!name = Emby保号
-#!desc =墨鱼版（自行添加Hostname，如果Emby服是Http://开头的，则无需手动添加Hostname） ，肥事（只需手动观看一次）
+#!desc =墨鱼版（自行添加Hostname，如果Emby服是Http://开头的，则无需手动添加Hostname,注：可能不适用需要观看视频才可保号的Emby服） ，肥事（只需手动观看一次）
 #!author = ZenmoFeiShi（墨鱼）[https://github.com/ZenmoFeiShi],ddgksf2013（怎么肥事）[https://github.com/ddgksf2013]
 #!loon_version = 3.2.2(749)
 #!icon = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/softlyx/Emby.png
