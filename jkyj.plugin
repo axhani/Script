@@ -5,6 +5,8 @@
 #!homepage = https://github.com/Keywos
 #!icon = https://raw.githubusercontent.com/Keywos/rule/main/tv/app/144px/yj.png
 #!input = 地区
+#!input = 地区
+
 
 [Argument]
 arg1 = input,"10 9 * * *",tag=定时参数
