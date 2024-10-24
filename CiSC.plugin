@@ -1,5 +1,5 @@
 #!name = 签到脚本合集
-#!desc = 收集并整理各大佬的定时签到脚本。脚本:奶茶多合一、蜜雪冰城、达美乐、阿里云社区、雨晨ios、高德地图、高德抢券、顺丰速运、B站每日等级、NodeSeek、网易云音乐人、杜蕾斯、杰士邦、逢三得利、尊享金陵,WPS....
+#!desc = 收集并整理各大佬的定时签到脚本。脚本:奶茶多合一、蜜雪冰城、达美乐、阿里云社区、雨晨ios、高德地图、高德抢券、顺丰速运、B站每日等级、NodeSeek、网易云音乐人、杜蕾斯、杰士邦、逢三得利、尊享金陵,WPS，匹歪价格监控_自动下单....
 #!date = 2024-10-25
 #!author = 自用
 #!icon = https://raw.githubusercontent.com/axhani/icon/refs/heads/main/miaomiao.png
@@ -68,6 +68,9 @@ arg44 = input,"10 9 * * *",tag=WPS定时参数
 arg45 = switch,flag,tag=WPS任务开关
 arg46 = switch,flag,tag=WPS获取token
 
+arg47 = input,"30/1 * * * *",tag=匹歪定时参数
+arg48 = switch,flag,tag=匹歪任务开关
+arg49 = switch,true,tag=匹歪获取Token
 
 
 
@@ -122,6 +125,10 @@ http-response ^https:\/\/app\.jinlinghotels\.com\/app\/wx\/v1\/getAuthUser scrip
 cron {arg44} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/wps.js, timeout=120,enable={arg45}, tag=WPS
 http-request ^https:\/\/(vip|account)(userinfo|\.wps\.cn\/p\/auth\/check)$ script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/wps.js, timeout=60,enable={arg46}, tag=WPS获取token
 
+cron {arg47} script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/Steampy.js, timeout=3,enable={arg48},tag=匹歪
+http-request https:\/\/steampy\.com\/(ownspace|xboot\/user\/info) script-path=https://raw.githubusercontent.com/anyehttp/quantumult-x/main/task/Stemapt_Cookie.js,enable = {arg9},tag=匹歪获取Token
+
+
 
 [MITM]
-hostname = webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn, mxsa.mxbc.net, game.dominos.com.cn, developer.aliyun.com, *.amap.com, mcs-mimp-web.sf-express.com, app.bilibili.com, m.bilibili.com, www.nodeseek.com, music.163.com, vip.ixiliu.cn, xh-vip-api.a-touchin.com, xiaodian.miyatech.com,app.jinlinghotels.com,  *.wps.cn
+hostname = webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn, mxsa.mxbc.net, game.dominos.com.cn, developer.aliyun.com, *.amap.com, mcs-mimp-web.sf-express.com, app.bilibili.com, m.bilibili.com, www.nodeseek.com, music.163.com, vip.ixiliu.cn, xh-vip-api.a-touchin.com, xiaodian.miyatech.com,app.jinlinghotels.com,  *.wps.cn, steampy.com
